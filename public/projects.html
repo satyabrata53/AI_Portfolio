@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Projects | Satyabrata Jena – Backend & AI Developer</title>
+  <meta name="description" content="Projects by Satyabrata Jena – Custom AI Agent System, Health Query AI Platform, Speech-Based Mood Detection, and production work at Telezer Technologies." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#0e0e0e", "on-surface": "#ffffff", "on-surface-variant": "#adaaaa",
+            "surface": "#0e0e0e", "surface-container-low": "#131313", "surface-container": "#1a1919",
+            "surface-container-high": "#201f1f", "surface-container-highest": "#262626",
+            "surface-variant": "#262626", "outline-variant": "#494847", "outline": "#777575",
+            "primary": "#85adff", "primary-dim": "#699cff", "primary-fixed": "#6e9fff",
+            "on-primary": "#002c66", "on-primary-fixed": "#000000",
+            "secondary": "#ac8aff", "secondary-dim": "#8455ef", "on-secondary": "#280067",
+            "tertiary": "#8ce7ff", "tertiary-dim": "#40ceed",
+          },
+          borderRadius: { DEFAULT: "1rem", lg: "2rem", xl: "3rem", full: "9999px" },
+          fontFamily: { headline: ["Manrope"], body: ["Inter"], label: ["Inter"] },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { background-color: #0e0e0e; color: #fff; font-family: 'Inter', sans-serif; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .glass-panel { background: rgba(26,25,25,0.5); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    .project-card { transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease; }
+    .project-card:hover { transform: translateY(-8px); box-shadow: 0 32px 64px rgba(0,0,0,0.4); }
+    .tag-badge { transition: background 0.2s, color 0.2s; }
+    @keyframes fadeSlideUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+    .section-fade { opacity:0; transform:translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .section-fade.visible { opacity:1; transform:translateY(0); }
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:#0e0e0e; }
+    ::-webkit-scrollbar-thumb { background:#262626; border-radius:9999px; }
+  </style>
+</head>
+<body class="selection:bg-primary/30">
+
+<!-- NAV -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/70 backdrop-blur-xl border-b border-white/5">
+  <div class="flex justify-between items-center px-6 md:px-10 py-4 max-w-7xl mx-auto font-headline tracking-tight">
+    <a href="/" class="text-lg font-black tracking-tighter bg-gradient-to-r from-[#85adff] to-[#ac8aff] bg-clip-text text-transparent">SATYA.DEV</a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-semibold">
+      <a href="/#experience" class="text-slate-400 hover:text-white transition-colors">Experience</a>
+      <a href="/#skills"     class="text-slate-400 hover:text-white transition-colors">Skills</a>
+      <a href="/#education"  class="text-slate-400 hover:text-white transition-colors">Education</a>
+      <a href="/projects"    class="text-[#85adff] font-bold border-b-2 border-[#85adff] pb-0.5">Projects</a>
+      <a href="/chat"        class="text-slate-400 hover:text-white transition-colors">Virtual Me</a>
+    </div>
+    <a href="mailto:jena23669@gmail.com"
+       class="hidden md:flex items-center gap-2 px-5 py-2 bg-primary/10 border border-primary/30 text-primary rounded-full text-sm font-semibold hover:bg-primary/20 transition-all">
+      <span class="material-symbols-outlined text-base">mail</span> Hire Me
+    </a>
+    <button onclick="document.getElementById('mobileNav').classList.toggle('hidden')" class="md:hidden p-2 text-slate-400">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+  <div id="mobileNav" class="hidden md:hidden px-6 pb-4 pt-3 flex flex-col gap-3 text-sm font-semibold border-t border-white/5">
+    <a href="/#experience" class="text-slate-400">Experience</a>
+    <a href="/#skills" class="text-slate-400">Skills</a>
+    <a href="/#education" class="text-slate-400">Education</a>
+    <a href="/projects" class="text-primary">Projects</a>
+    <a href="/chat" class="text-slate-400">Virtual Me</a>
+  </div>
+</nav>
+
+<main class="pt-32 pb-24 px-6 md:px-10 max-w-7xl mx-auto">
+
+  <!-- Page Header -->
+  <div class="mb-20 section-fade">
+    <p class="text-primary text-sm font-semibold uppercase tracking-widest mb-3">What I've built</p>
+    <h1 class="font-headline text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tighter mb-5">
+      My <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Projects</span>
+    </h1>
+    <p class="text-on-surface-variant max-w-2xl text-lg font-light leading-relaxed">
+      Production systems spanning AI agent design, backend development, voice technology, and full-stack deployment. Every project is built with a focus on reliability and real-world impact.
+    </p>
+  </div>
+
+  <!-- ── PRODUCTION WORK ── -->
+  <section class="mb-24 section-fade">
+    <div class="flex items-center gap-4 mb-10">
+      <h2 class="font-headline text-2xl font-bold tracking-tight whitespace-nowrap">Production Work</h2>
+      <div class="h-px flex-grow bg-gradient-to-r from-primary/30 to-transparent"></div>
+      <span class="text-xs text-primary font-semibold uppercase tracking-widest whitespace-nowrap px-3 py-1 bg-primary/10 rounded-full border border-primary/20">@ Telezer Technologies</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- QC AI Agent -->
+      <div class="project-card glass-panel rounded-2xl p-8 border border-white/5 flex flex-col h-full">
+        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
+          <span class="material-symbols-outlined text-primary text-2xl">verified</span>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="tag-badge px-3 py-1 bg-primary/10 rounded-full text-xs font-bold text-primary border border-primary/15">LangChain</span>
+          <span class="tag-badge px-3 py-1 bg-primary/10 rounded-full text-xs font-bold text-primary border border-primary/15">LangGraph</span>
+          <span class="tag-badge px-3 py-1 bg-surface-container-highest rounded-full text-xs font-bold text-on-surface-variant">Faster-Whisper</span>
+          <span class="tag-badge px-3 py-1 bg-surface-container-highest rounded-full text-xs font-bold text-on-surface-variant">Qwen 7B</span>
+          <span class="tag-badge px-3 py-1 bg-surface-container-highest rounded-full text-xs font-bold text-on-surface-variant">SQLite</span>
+        </div>
+        <h3 class="font-headline text-2xl font-extrabold mb-3">QC AI Agent</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-6 flex-grow">
+          Production-grade Quality Control agent for automated call evaluation. Built the full pipeline: call recordings → Faster-Whisper STT → Qwen 7B local LLM → structured quality scoring and business insights. Implemented multi-step reasoning using LangGraph with fallback logic deployed on on-premise Linux servers.
+        </p>
+        <div class="pt-4 border-t border-white/5 flex flex-wrap gap-4 text-xs text-on-surface-variant">
+          <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-primary">check_circle</span> Live in Production</span>
+          <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-tertiary">dns</span> On-Premise Linux</span>
+          <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-secondary">psychology</span> Multi-step Reasoning</span>
+        </div>
+      </div>
+
+      <!-- Voice AI Pipeline -->
+      <div class="project-card glass-panel rounded-2xl p-8 border border-white/5 flex flex-col h-full">
+        <div class="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center mb-5">
+          <span class="material-symbols-outlined text-secondary text-2xl">call</span>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="tag-badge px-3 py-1 bg-secondary/10 rounded-full text-xs font-bold text-secondary border border-secondary/15">WebRTC · LiveKit</span>
+          <span class="tag-badge px-3 py-1 bg-secondary/10 rounded-full text-xs font-bold text-secondary border border-secondary/15">VICIdial</span>
+          <span class="tag-badge px-3 py-1 bg-surface-container-highest rounded-full text-xs font-bold text-on-surface-variant">Asterisk</span>
+          <span class="tag-badge px-3 py-1 bg-surface-container-highest rounded-full text-xs font-bold text-on-surface-variant">STT · TTS</span>
+        </div>
+        <h3 class="font-headline text-2xl font-extrabold mb-3">Real-Time Voice AI Pipeline</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-6 flex-grow">
+          End-to-end voice AI system for BPO automation, integrating VICIdial and Asterisk telephony with WebRTC (LiveKit) for real-time AI voice interactions. Designed low-latency conversational AI using ChatGPT and local LLMs with STT and TTS — managing complete call flows from ingestion to agent response.
+        </p>
+        <div class="pt-4 border-t border-white/5 flex flex-wrap gap-4 text-xs text-on-surface-variant">
+          <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-primary">check_circle</span> Live in Production</span>
+          <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-tertiary">speed</span> Low-Latency</span>
+          <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-sm text-secondary">mic</span> Real-time Voice</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PERSONAL PROJECTS ── -->
+  <section class="mb-24 section-fade">
+    <div class="flex items-center gap-4 mb-10">
+      <h2 class="font-headline text-2xl font-bold tracking-tight whitespace-nowrap">Personal Projects</h2>
+      <div class="h-px flex-grow bg-gradient-to-r from-secondary/30 to-transparent"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+      <!-- Custom AI Agent -->
+      <div class="project-card glass-panel rounded-2xl p-8 border border-white/5 flex flex-col h-full">
+        <div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
+          <span class="material-symbols-outlined text-primary text-2xl">account_tree</span>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="tag-badge px-2.5 py-1 bg-primary/10 rounded-full text-xs font-bold text-primary border border-primary/15">Python</span>
+          <span class="tag-badge px-2.5 py-1 bg-primary/10 rounded-full text-xs font-bold text-primary border border-primary/15">Ollama</span>
+          <span class="tag-badge px-2.5 py-1 bg-primary/10 rounded-full text-xs font-bold text-primary border border-primary/15">LangChain</span>
+          <span class="tag-badge px-2.5 py-1 bg-surface-container-highest rounded-full text-xs font-bold text-on-surface-variant">ChromaDB</span>
+          <span class="tag-badge px-2.5 py-1 bg-surface-container-highest rounded-full text-xs font-bold text-on-surface-variant">FAISS</span>
+        </div>
+        <h3 class="font-headline text-xl font-extrabold mb-3">Custom AI Agent System</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-6 flex-grow">
+          Fully local AI agent framework implementing the complete agent loop: intent parsing → tool selection → multi-step reasoning → structured output. Built RAG pipeline with ChromaDB and FAISS for context-aware responses over private data. Implemented tool-calling with JSON schema validation, fallback handling, and memory management.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 text-xs text-on-surface-variant">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-primary">lock</span> 100% Local</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-secondary">memory</span> RAG + Vector DB</span>
+        </div>
+      </div>
+
+      <!-- Health Query AI -->
+      <div class="project-card glass-panel rounded-2xl p-8 border border-white/5 flex flex-col h-full">
+        <div class="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center mb-5">
+          <span class="material-symbols-outlined text-secondary text-2xl">health_and_safety</span>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="tag-badge px-2.5 py-1 bg-secondary/10 rounded-full text-xs font-bold text-secondary border border-secondary/15">Node.js</span>
+          <span class="tag-badge px-2.5 py-1 bg-secondary/10 rounded-full text-xs font-bold text-secondary border border-secondary/15">Express.js</span>
+          <span class="tag-badge px-2.5 py-1 bg-secondary/10 rounded-full text-xs font-bold text-secondary border border-secondary/15">MongoDB</span>
+          <span class="tag-badge px-2.5 py-1 bg-surface-container-highest rounded-full text-xs font-bold text-on-surface-variant">Render</span>
+          <span class="tag-badge px-2.5 py-1 bg-surface-container-highest rounded-full text-xs font-bold text-on-surface-variant">Netlify</span>
+        </div>
+        <h3 class="font-headline text-xl font-extrabold mb-3">Health Query AI Platform</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-6 flex-grow">
+          Full-stack AI-powered health query platform using LLM-based responses with safety guardrails and domain-specific prompt engineering. Deployed RESTful APIs on Render with CI/CD frontend on Netlify. Focused on response reliability using structured prompts and context management.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 text-xs text-on-surface-variant">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-primary">cloud</span> Deployed Live</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-secondary">security</span> Safety Guardrails</span>
+        </div>
+      </div>
+
+      <!-- Speech Mood Detection -->
+      <div class="project-card glass-panel rounded-2xl p-8 border border-white/5 flex flex-col h-full">
+        <div class="w-12 h-12 rounded-2xl bg-tertiary/10 flex items-center justify-center mb-5">
+          <span class="material-symbols-outlined text-tertiary text-2xl">sentiment_neutral</span>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="tag-badge px-2.5 py-1 bg-tertiary/10 rounded-full text-xs font-bold text-tertiary border border-tertiary/15">Python</span>
+          <span class="tag-badge px-2.5 py-1 bg-tertiary/10 rounded-full text-xs font-bold text-tertiary border border-tertiary/15">NLTK</span>
+          <span class="tag-badge px-2.5 py-1 bg-tertiary/10 rounded-full text-xs font-bold text-tertiary border border-tertiary/15">SpeechRecognition</span>
+          <span class="tag-badge px-2.5 py-1 bg-surface-container-highest rounded-full text-xs font-bold text-on-surface-variant">NLP</span>
+        </div>
+        <h3 class="font-headline text-xl font-extrabold mb-3">Speech-Based Mood Detection</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-6 flex-grow">
+          End-to-end pipeline from audio ingestion → speech-to-text → NLP → emotion classification. Implemented multi-class emotion detection using vocal patterns and textual features. Same core STT/NLP architecture later applied to production voice AI systems at Telezer Technologies.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-4 border-t border-white/5 text-xs text-on-surface-variant">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-tertiary">mic</span> Audio → Emotion</span>
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm text-primary">school</span> OCAC Training</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── STATS BENTO ── -->
+  <section class="section-fade">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="md:col-span-2 glass-panel rounded-2xl p-10 border border-white/5">
+        <h3 class="font-headline text-3xl font-black mb-6 tracking-tight">Impact Metrics</h3>
+        <div class="flex flex-wrap items-center gap-10">
+          <div>
+            <p class="text-4xl font-headline font-bold text-primary">3+</p>
+            <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold mt-1">Personal Projects</p>
+          </div>
+          <div class="w-px h-12 bg-white/10"></div>
+          <div>
+            <p class="text-4xl font-headline font-bold text-secondary">2</p>
+            <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold mt-1">Production Systems</p>
+          </div>
+          <div class="w-px h-12 bg-white/10"></div>
+          <div>
+            <p class="text-4xl font-headline font-bold text-tertiary">&lt;250ms</p>
+            <p class="text-xs uppercase tracking-widest text-on-surface-variant font-semibold mt-1">Voice Latency Target</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-gradient-to-br from-primary/15 to-secondary/15 rounded-2xl p-8 border border-primary/10 flex flex-col items-center justify-center text-center group">
+        <span class="material-symbols-outlined text-5xl text-primary mb-4 group-hover:scale-110 transition-transform duration-500" style="font-variation-settings:'FILL' 1">smart_toy</span>
+        <h4 class="font-headline font-bold text-xl mb-2">Talk to Virtual Me</h4>
+        <p class="text-sm text-on-surface-variant mb-5">Ask me anything about my projects, skills, or experience.</p>
+        <a href="/chat" class="px-6 py-3 bg-gradient-to-r from-primary to-secondary text-[#000] text-sm font-bold rounded-full hover:scale-105 transition-all">
+          Start Chat →
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="w-full py-10 px-6 md:px-10 bg-[#0e0e0e] border-t border-white/5 mt-12">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    <div>
+      <div class="font-headline font-black text-lg bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-1">SATYA.DEV</div>
+      <p class="text-slate-600 text-xs">Backend & AI Systems Developer · Hyderabad, India</p>
+    </div>
+    <div class="flex gap-6 text-sm font-semibold text-slate-500">
+      <a href="/" class="hover:text-white transition-colors">Home</a>
+      <a href="/projects" class="hover:text-white transition-colors">Projects</a>
+      <a href="/chat" class="hover:text-white transition-colors">Virtual Me</a>
+    </div>
+    <p class="text-slate-600 text-xs">© 2025 Satyabrata Jena</p>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), { threshold: 0.1 });
+  document.querySelectorAll('.section-fade').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
